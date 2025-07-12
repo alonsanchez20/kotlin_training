@@ -17,8 +17,10 @@ import java.math.BigInteger
 class AppController(private val productService: ProductService) {
 
 
-    @GetMapping
-    fun index(@RequestParam("name") name: String) = "Hello, $name!"
+    @GetMapping("/products")
+    fun findAllProducts(): ResponseEntity<List<Product>> {
+        return ResponseEntity.ok(productService.findAll());
+    }
 
 
     @GetMapping("/products/{id}")
