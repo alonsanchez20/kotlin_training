@@ -1,6 +1,6 @@
 package com.alonso.demokotlin.security.service
 
-import com.alonso.demokotlin.model.entity.User
+import com.alonso.demokotlin.security.entity.User
 import com.alonso.demokotlin.security.repository.UserRepository
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.crypto.password.PasswordEncoder

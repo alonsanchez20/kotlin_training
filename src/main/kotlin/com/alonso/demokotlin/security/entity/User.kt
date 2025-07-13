@@ -1,4 +1,6 @@
-package com.alonso.demokotlin.model.entity
+@file:Suppress("ktlint:standard:no-wildcard-imports")
+
+package com.alonso.demokotlin.security.entity
 
 import jakarta.persistence.*
 

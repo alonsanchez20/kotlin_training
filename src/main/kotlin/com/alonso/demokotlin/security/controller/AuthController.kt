@@ -1,6 +1,6 @@
 package com.alonso.demokotlin.security.controller
 
-import com.alonso.demokotlin.model.entity.User
+import com.alonso.demokotlin.security.entity.User
 import com.alonso.demokotlin.security.jwt.JwtUtil
 import com.alonso.demokotlin.security.service.UserService
 import org.springframework.http.ResponseEntity
