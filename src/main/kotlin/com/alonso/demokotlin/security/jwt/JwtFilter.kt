@@ -13,7 +13,6 @@ class JwtFilter(
 ) : OncePerRequestFilter() {
     private val logger = LoggerFactory.getLogger(JwtFilter::class.java)
 
-    // src/main/kotlin/com/alonso/demokotlin/security/JwtFilter.kt
     override fun doFilterInternal(
         request: HttpServletRequest,
         response: HttpServletResponse,
