@@ -1,20 +1,21 @@
-package com.alonso.demokotlin.model
+package com.alonso.demokotlin.model.entity
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import jakarta.persistence.*
-import java.math.BigInteger
 
 @Entity
 @Table(name = "product")
-data class Product(
-
+@Inheritance(strategy = InheritanceType.JOINED)
+class Product(
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "productSeqGen")
     @SequenceGenerator(name = "productSeqGen", sequenceName = "product_id_seq", allocationSize = 1)
-    val id: BigInteger?,
-
+    val id: Long?,
     @Column(unique = true, nullable = false)
     val name: String,
-
     @Column(nullable = false)
-    val price: Int
+    val price: Double,
+    @OneToMany(mappedBy = "product", cascade = [CascadeType.ALL], orphanRemoval = true)
+    @JsonIgnore
+    val reviews: List<Review> = mutableListOf(),
 )
