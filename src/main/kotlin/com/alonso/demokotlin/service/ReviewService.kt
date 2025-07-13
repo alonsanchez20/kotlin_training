@@ -27,7 +27,7 @@ class ReviewService(
 
         val review =
             Review(
-                id = null, // o el valor correspondiente
+                id = null,
                 comment = reviewRequest.comment,
                 product = product.get(),
             )

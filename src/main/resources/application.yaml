@@ -14,6 +14,11 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   flyway:
     locations: classpath:db/migration
-
   application:
     name: demo-kotlin
+
+application:
+  security:
+    jwt:
+      secret: ${jwt_secret}
+      expiration: 1200000
